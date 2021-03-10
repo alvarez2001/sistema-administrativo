@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { NavLink } from "react-router-dom";
-import config from "../config";
+import { config } from "../config";
 
 class SideMenu extends Component {
 	render() {
@@ -56,7 +56,7 @@ class SideMenu extends Component {
 							<ol className="text-sm">
 								<li className="">
 									<NavLink
-										to={`${this.props.path}/estado`}
+										to={`${this.props.path}/estado/listar`}
 										exact
 										className="block outline-none py-2 px-3 hover:bg-green-900 transform hover:-translate-x-4 transition ease-in duration-300 rounded"
 										activeClassName="bg-green-900 -translate-x-4"
@@ -77,7 +77,7 @@ class SideMenu extends Component {
 										<span className="mr-1.5">
 											<i className="fas fa-plus-square"></i>
 										</span>
-										Crear estado
+										Registrar transferencia
 									</NavLink>
 								</li>
 							</ol>

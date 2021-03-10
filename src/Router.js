@@ -11,7 +11,7 @@ class Router extends Component {
 				<Switch>
 					<Route path="/dashboard" component={Dashboard} />
 					<Route exact path="/" component={Login} />
-					<Route component={Page404} />
+					<Route path="*" component={Page404} />
 				</Switch>
 			</BrowserRouter>
 		);

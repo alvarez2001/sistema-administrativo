@@ -1,14 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import config from "../config";
+import { config } from "../config";
 
 const HeaderDashboard = (props) => {
 	const { nombre, apellido, image } = props;
 	return (
-		<header className="bg-gradient-to-r from-green-900 font-sans to-green-600 text-white px-4 w-auto fixed h-16 items-center flex justify-end containerContenido w-full">
+		<header className="bg-gradient-to-r from-green-900 font-sans to-green-600 text-white px-4 w-auto fixed h-16 items-center flex justify-end containerContenido w-full z-10">
 			<div className="flex items-center">
 				<div className="text-3xl">
-					<NavLink to="/" className="mx-2">
+					<NavLink to="/dashboard" className="mx-2">
 						<i className="fab fa-whmcs"></i>
 					</NavLink>
 					<NavLink to="/dashboard/off/1" className="mx-2">

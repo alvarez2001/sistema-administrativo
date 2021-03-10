@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { Component } from "react";
-import config from "../../../../config";
+import { config, headersAuth } from "../../../../config";
 
 class CrearUsuario extends Component {
 	constructor(props) {
@@ -37,7 +37,6 @@ class CrearUsuario extends Component {
 		event.preventDefault();
 		const imageInput = document.querySelector("#image").files[0];
 		const image = imageInput ? imageInput : null;
-		const token = sessionStorage.getItem("user-token");
 
 		const { apellido, username, email, nombre, password } = this.state.usuario;
 
@@ -56,7 +55,7 @@ class CrearUsuario extends Component {
 			.post(config.url + "/usuario/registro", form, {
 				headers: {
 					"Content-Type": "multipart/form-data",
-					"user-token": token,
+					...headersAuth(),
 				},
 			})
 			.then((response) => {

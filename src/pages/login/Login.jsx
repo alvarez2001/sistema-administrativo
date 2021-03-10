@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Fondo from "../../assets/imgs/backgroundLogin.jpg";
-import config from "../../config";
+import { config } from "../../config";
 import axios from "axios";
 import FormLogin from "../../component/FormLogin";
 

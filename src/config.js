@@ -1,5 +1,17 @@
 const config = {
-	url: "http://localhost:4000/api",
+	url: "https://sistema-administrativo.herokuapp.com/api",
 };
 
-export default config;
+const headersAuth = () => ({
+	"user-token": tokenSessionStorage(),
+});
+
+const tokenSessionStorage = () => {
+	const token = sessionStorage.getItem("user-token");
+	return token;
+};
+
+module.exports = {
+	config,
+	headersAuth,
+};

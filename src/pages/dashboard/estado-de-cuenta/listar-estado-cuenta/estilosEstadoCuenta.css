@@ -1,0 +1,28 @@
+@media (max-width: 1023px) {
+	.tablaPropia thead {
+		display: none;
+	}
+	.tablaPropia table tr {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid #d1d5db;
+		border-radius: 10px;
+		padding: 16px;
+		margin-bottom: 16px;
+		background-color: #e5e7eb;
+	}
+
+	.tablaPropia table td[data-titulo] {
+		display: flex;
+	}
+	.tablaPropia table td[data-titulo]::before {
+		content: attr(data-titulo);
+		padding-right: 10px;
+		text-transform: capitalize;
+		font-weight: 600;
+	}
+	.tablaPropia table td.acciones {
+		display: flex;
+		justify-content: space-around;
+	}
+}

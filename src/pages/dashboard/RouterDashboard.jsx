@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import CerrarSession from "./cerrar-sesion/CerrarSesion";
-import ListarEstadoCuenta from "./listar-estado-cuenta/ListarEstadoCuenta";
 import RouterUsuario from "./usuario/RouterUsuario";
 import HomeDashboard from "./home/HomeDashboard";
 import RouterEstadoCuenta from "./estado-de-cuenta/RouterEstadoCuenta";
@@ -13,8 +12,6 @@ class RouterDashboard extends Component {
 			<React.Fragment>
 				<Switch>
 					<Route path={`${path}/`} exact component={HomeDashboard} />
-
-					<Route path={`${path}/estado`} exact component={ListarEstadoCuenta} />
 
 					<Route path={`${path}/off/1`} exact component={CerrarSession} />
 				</Switch>
