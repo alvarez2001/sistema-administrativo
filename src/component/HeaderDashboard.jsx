@@ -17,7 +17,7 @@ const HeaderDashboard = (props) => {
 				</div>
 
 				<div className="">
-					<NavLink to="/">
+					<NavLink to="/dashboard">
 						<img
 							src={config.url + "/usuario/imagen/" + image}
 							alt={nombre + " " + apellido}

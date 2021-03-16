@@ -32,7 +32,7 @@ class SideMenu extends Component {
 							{`${nombre} ${apellido}`}
 						</h3>
 					</div>
-					<nav className="font-sans mt-3">
+					<nav className="font-sans mt-3 mb-6">
 						<div className="">
 							<p className="capitalize text-xs py-2 border-green-900 border-b border-black">
 								Principal
@@ -41,7 +41,8 @@ class SideMenu extends Component {
 								<li className=" ">
 									<NavLink
 										to="/dashboard"
-										className="block outline-none py-2 px-3 hover:bg-green-900 transform hover:-translate-x-4 transition ease-in duration-300 rounded"
+										className="block outline-none py-2 px-3 hover:bg-green-900 transform hover:-translate-x-4 transition ease-in duration-300 rounded "
+										onClick={this.props.toggleMenu}
 									>
 										<span className="mr-1.5">
 											<i className="fas fa-home"></i>
@@ -58,6 +59,7 @@ class SideMenu extends Component {
 									<NavLink
 										to={`${this.props.path}/estado/listar`}
 										exact
+										onClick={this.props.toggleMenu}
 										className="block outline-none py-2 px-3 hover:bg-green-900 transform hover:-translate-x-4 transition ease-in duration-300 rounded"
 										activeClassName="bg-green-900 -translate-x-4"
 									>
@@ -69,6 +71,7 @@ class SideMenu extends Component {
 								</li>
 								<li className="">
 									<NavLink
+										onClick={this.props.toggleMenu}
 										to={`${this.props.path}/estado/crear`}
 										exact
 										className="block outline-none py-2 px-3 hover:bg-green-900 transform hover:-translate-x-4 transition ease-in duration-300 rounded"
@@ -87,6 +90,7 @@ class SideMenu extends Component {
 							<ol className="text-sm">
 								<li className=" ">
 									<NavLink
+										onClick={this.props.toggleMenu}
 										to={`${this.props.path}/usuario/crear`}
 										className="block outline-none py-2 px-3 hover:bg-green-900 transform hover:-translate-x-4 transition ease-in duration-300 rounded"
 										activeClassName="bg-green-900 -translate-x-4"
