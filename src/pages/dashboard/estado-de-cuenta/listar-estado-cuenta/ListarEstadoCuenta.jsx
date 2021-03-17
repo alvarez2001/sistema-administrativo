@@ -116,12 +116,18 @@ class ListarEstadoCuenta extends React.Component {
 	};
 
 	BuscarReferencia = (event) => {
+
+		
 		axios
 			.get(`${config.url}/state-account/${event}`, { headers: headersAuth() })
 			.then((response) => {
-				response.data.data.verified === "si"
-					? this.redirigirVisualizar(event)
-					: this.redirigirVerificar(event);
+				console.log(response.data.data)
+				const  { verified, id } = response.data.data
+				
+				verified === "si"
+					? this.redirigirVisualizar(id)
+					: this.redirigirVerificar(id);
+					
 			});
 	};
 	redirigirVerificar = (event) => {
